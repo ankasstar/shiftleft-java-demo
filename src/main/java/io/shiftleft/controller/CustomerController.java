@@ -71,7 +71,7 @@ import org.springframework.web.util.HtmlUtils;
 @PropertySource({ "classpath:config/application-sfdc.properties" })
 @RestController
 public class CustomerController {
-
+@Validated
 	@Autowired
 	private CustomerRepository customerRepository;
 
