@@ -11,7 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
-@Entity
+import javax.validation.constraints.Pattern;
 public class Customer {
   public Customer() {
   }
@@ -54,7 +54,7 @@ public class Customer {
 
   private String phoneNumber;
 
-  @OneToOne(cascade = { CascadeType.ALL })
+ @Pattern(regexp = "[0-9]{3}-[0-9]{3}-[0-9]{4}")
   private Address address;
 
   @OneToMany(cascade = { CascadeType.ALL })
